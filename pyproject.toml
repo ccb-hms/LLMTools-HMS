@@ -1,7 +1,7 @@
 [project]
 name = "llmtools"
-version = "0.1.0"
-description = "Add your description here"
+dynamic = ["version"]
+description = "A repository for getting started with LLM resources at Harvard Medical School"
 readme = "README.md"
 authors = [
     { name = "Andreas Werdich", email = "andreas_werdich@hms.harvard.edu" }
@@ -13,5 +13,22 @@ dependencies = []
 llmtools = "llmtools:main"
 
 [build-system]
-requires = ["uv_build>=0.8.23,<0.9.0"]
-build-backend = "uv_build"
+requires = ["setuptools>=41", 
+            "wheel", 
+            "setuptools-git-versioning>=2.0,<3"]
+build-backend = "setuptools.build_meta"
+
+[tool.uv]
+python-preference = "only-system"
+
+[tool.setuptools]
+# this package will read some included files in runtime, avoid installing it as .zip
+zip-safe = false
+
+[tool.setuptools.package-data]
+# include VERSION file to a package
+llmtools = ["VERSION"]
+
+[tool.setuptools-git-versioning]
+enabled = true
+version_file = "llmtools/VERSION"

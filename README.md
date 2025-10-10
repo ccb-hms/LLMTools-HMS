@@ -12,6 +12,6 @@ https://www.python.org/downloads/release/python-31012/)
 
 ## The CCB MedAI Repository ##
 
-This repository contains the `Ollama` class, derived from the [Ollama](https://pypi.org/project/ollama/) project. Its primary goal is to assist you in getting started with Ollama models on your own hardware. The containerized environment is particularly beneficial if you plan to use the Ollama library with an NVIDIA GPU.
+This repository contains tools developed by CCB for using Large Language Models (LLMs) at Harvard Medical School. Its main goal is to help you get started with LLMs on your own hardware and on the HMS [High Performance Computing Platforms](https://harvardmed.atlassian.net/wiki/spaces). 
 
-[Installation instructions](docs/installation.md)
+For [installation instructions](docs/installation.md), please refer to the provided link.

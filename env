@@ -1,0 +1,7 @@
+OMPI_ALLOW_RUN_AS_ROOT=1
+OMPI_ALLOW_RUN_AS_ROOT_CONFIRM=1
+NIM_MAX_MODEL_LEN=81920
+NGC_API_KEY="ngc_api_key"
+OPENAI_API_ENDPOINT="openai_api_endpoint"
+OPENAI_API_KEY="openai_api_key"
+OPENAI_API_VERSION="openai_api_version"

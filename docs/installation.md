@@ -1,15 +1,17 @@
+## LLM Tools Installation ##
+
 ### Local Installation with Docker ###
 
 1. Install [Docker](https://docs.docker.com/) on your machine.
 
 2. Clone the GitHub repository to create a local copy:
    ```bash
-   git clone git@github.com:ccb-hms/medai.git
+   git clone git@github.com:ccb-hms/LLMTools-HMS.git
    ```
 
 3. Navigate to the repository's directory and build the Docker images:
    ```bash
-   cd medai && docker-compose build
+   cd LLMTools-HMS && docker-compose build
    ```
    This command builds the Ollama image and a specialized development image for using the Ollama Python library, along with any other necessary packages for your data science project (e.g., pandas, numpy, scikit-learn, etc.). The MedAI image includes a Dockerfile that uses the official [Python 3.12](https://hub.docker.com/layers/library/python/3.12.10/images/sha256-2749d801aca0c7d0b0b2106dabe3a8bca138c597b273d18c4e497f61e703603c) Docker image as the base image, along with the dependencies outlined in the project's `pyproject.toml` file. The image is built locally and stored in the Docker image cache directory. To rebuild the image, simply run `docker-compose build` again. To remove the image, use the command `docker-compose down --rmi all`.
 

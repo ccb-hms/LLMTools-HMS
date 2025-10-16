@@ -42,7 +42,6 @@ services:
       - ./env
     ports:
       - "8888:8888"
-      - "6006:6006"
     volumes:
       - .:/app
       - app_data:/app/data

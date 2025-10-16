@@ -28,7 +28,6 @@ EXPOSE 8888
 RUN mkdir -p /app
 WORKDIR /app
 
-
 # Install the project's dependencies using the lockfile and settings
 RUN --mount=type=cache,target=/root/.cache/uv \
     --mount=type=bind,source=.git,target=.git \

@@ -10,7 +10,7 @@ https://www.python.org/downloads/release/python-31012/)
 <!-- ABOUT THE PROJECT -->
 <!-- ABOUT THE PROJECT -->
 
-## The CCB MedAI Repository ##
+## The CCB LLM-Tools Repository ##
 
 This repository contains tools developed by CCB for using Large Language Models (LLMs) at Harvard Medical School. Its main goal is to help you get started with LLMs on your own hardware and on the HMS [High Performance Computing Platforms](https://harvardmed.atlassian.net/wiki/spaces). 
 

@@ -15,9 +15,9 @@ import tqdm
 ## configurations
 
 
-model_name = "Qwen/Qwen3-235B-A22B-Instruct-2507"  #"Qwen/Qwen3-30B-A3B-Instruct-2507"  # "Qwen/Qwen3-4B-Instruct-2507"
+model_name = "Qwen/Qwen3-4B-Instruct-2507" #"Qwen/Qwen3-235B-A22B-Instruct-2507"  #"Qwen/Qwen3-30B-A3B-Instruct-2507"  # "Qwen/Qwen3-4B-Instruct-2507"
 model_id = "Qwen"
-batch_size = 32  # adjust based on GPU/CPU memory
+batch_size = 16  # adjust based on GPU/CPU memory
 output_imagePath = 'longwood.png'
 
 def load_model_and_tokenizer(model_name):

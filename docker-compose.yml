@@ -1,35 +1,32 @@
 services:
-  ollama:
-    image: docker.io/ollama/ollama:latest
-    restart: unless-stopped
-    environment:
-      - OLLAMA_KEEP_ALIVE=24h
-      - OLLAMA_HOST=0.0.0.0
-      - OLLAMA_DEBUG=1
+  vllm:
+    image: vllm/vllm-openai:latest
+    container_name: vllm
+    #restart: unless-stopped
+    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    env_file:
+      - .env
     volumes:
-      - ollama_data:/root/.ollama   
+      - ${HUGGING_FACE_CACHE_DIR}:/root/.cache/huggingface 
+    ipc: host
+    command: >
+      --model facebook/opt-125m 
+      --host 0.0.0.0 
+      --port 8000
+      --served-model-name opt
     networks:
-      ollama_network:
+      vllm_network:
         aliases:
-          - ollama
+          - vllm
     ports:
-      - '11434:11434'
-
-  open-webui:
-      image: ghcr.io/open-webui/open-webui:main
-      restart: unless-stopped
-      volumes:
-        - open_webui_data:/app/backend/data
-      depends_on:
-        - ollama
-      networks:
-        - ollama_network
-      ports:
-        - '3000:8080'
-      environment:
-        - 'OLLAMA_BASE_URL=http://ollama:11434'
-        - 'WEBUI_SECRET_KEY=1234'
-        - 'WEBUI_AUTH=False'
+      - '8000:8000'
 
   app:
     image: llmtools:latest
@@ -37,33 +34,26 @@ services:
     build: 
       context: .
       network: host
-      dockerfile: Dockerfile
+      dockerfile: ./Dockerfile.app
       args:
         - DEV_llmtools=1
     depends_on:
-      - ollama
+      - vllm
     ipc: host
     environment:
       - HOME=/app
       - DATA=/app/data
-      - HF_HOME="/app/data/huggingface-cache"
+      - HF_HOME=${HUGGING_FACE_CACHE_DIR}
     env_file:
       - ./env
     ports:
       - '8888:8888'
     volumes:
       - .:/app
-      - app_data:/app/data
+      - ${DATA_DIR}:/app/data
     networks:
-      - ollama_network
+      - vllm_network
 
-volumes:
-  app_data:
-    external: false
-  ollama_data:
-    external: false
-  open_webui_data:
-    external: false
 networks:
-  ollama_network:
+  vllm_network:
     driver: bridge

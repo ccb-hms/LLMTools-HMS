@@ -17,7 +17,7 @@ services:
       - ${HUGGING_FACE_CACHE_DIR}:/root/.cache/huggingface 
     ipc: host
     command: >
-      --model facebook/opt-125m 
+      --model facebook/opt-125m
       --host 0.0.0.0 
       --port 8000
       --served-model-name opt
@@ -27,6 +27,23 @@ services:
           - vllm
     ports:
       - '8000:8000'
+
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    restart: unless-stopped
+    volumes:
+      - open_webui_data:/app/backend/data
+    depends_on:
+      - vllm
+    networks:
+      - vllm_network
+    ports:
+      - '3000:8080'
+    environment:
+      - 'OPENAI_API_BASE_URL=http://vllm:8000/v1'
+      - 'OPENAI_API_KEY=${VLLM_API_KEY}'
+      - 'WEBUI_SECRET_KEY=1234'
+      - 'WEBUI_AUTH=False'
 
   app:
     image: llmtools:latest
@@ -53,6 +70,10 @@ services:
       - ${DATA_DIR}:/app/data
     networks:
       - vllm_network
+
+volumes:
+  open_webui_data:
+    external: false
 
 networks:
   vllm_network:

@@ -17,10 +17,11 @@ services:
       - ${HUGGING_FACE_CACHE_DIR}:/root/.cache/huggingface 
     ipc: host
     command: >
-      --model facebook/opt-125m
+      --model TinyLlama/TinyLlama-1.1B-Chat-v1.0
       --host 0.0.0.0 
       --port 8000
       --served-model-name opt
+      --cpu-offload-gb 3
     networks:
       vllm_network:
         aliases:
@@ -64,7 +65,7 @@ services:
     env_file:
       - ./env
     ports:
-      - '7485:8888'
+      - '7486:8888'
     volumes:
       - .:/app
       - ${DATA_DIR}:/app/data

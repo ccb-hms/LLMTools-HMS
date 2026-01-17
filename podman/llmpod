@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# ENVIRONMENT
+POD="llmpod"
+
+# Create the pod
+podman pod create \
+--name ${POD} \
+-p 127.0.0.1:7486:8888 \
+--userns=keep-id:uid=1001

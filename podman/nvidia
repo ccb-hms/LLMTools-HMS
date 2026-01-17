@@ -1,0 +1,12 @@
+#!/bin/bash
+
+podman run --rm -it \
+--device nvidia.com/gpu=all \
+--security-opt=label=disable \
+--userns=keep-id:uid=1001 \
+--shm-size=4GB \
+--env-file=nvidia.env \
+--workdir=/workspace \
+-v /home/andreas/data/llmdata:/workspace/data \
+nvcr.io/nvidia/pytorch:25.12-py3 \
+/bin/bash

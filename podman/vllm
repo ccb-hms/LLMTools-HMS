@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# ENVIRONMENT
+POD="llmpod"
+PROJECT_DIR="${HOME}/gitrepos/llmtools"
+RHAIIS_CACHE_DIR="${HOME}/data/rhaiis.cache"
+HUGGING_FACE_CACHE_DIR="${HOME}/data/huggingface.cache"
+
+# UNUSED FLAGS
+# --userns=keep-id:uid=1001 # Defined on pod-level
+
+# CONTAINER
+podman run --rm -it \
+--pod=${POD} \
+--device nvidia.com/gpu=all \
+--security-opt=label=disable \
+--shm-size=4GB \
+--env-file vllm.env \
+-v ${RHAIIS_CACHE_DIR}:/opt/app-root/src/.cache \
+registry.redhat.io/rhaiis/vllm-cuda-rhel9:3.1.0 \
+--model TinyLlama/TinyLlama-1.1B-Chat-v1.0 \
+--served-model-name opt \
+--host 0.0.0.0 \
+--port 8000 \
+--cpu-offload-gb 3

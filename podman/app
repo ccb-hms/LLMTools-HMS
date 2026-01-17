@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# ENVIRONMENT
+POD="llmpod"
+PROJECT_DIR="${HOME}/gitrepos/llmtools"
+DATA_DIR="${HOME}/data/llmdata"
+
+# UNUSED FLAGS
+# -p 7486:8888 # port exposed to host on pod-level
+# --userns=keep-id:uid=1001 # use name space set on pod level
+
+# CONTAINER
+podman run --rm \
+--pod=${POD} \
+--security-opt=label=disable \
+--env-file=app.env \
+--workdir=/app \
+-v ${PROJECT_DIR}:/app \
+-v ${DATA_DIR}:/app/data \
+localhost/app:latest

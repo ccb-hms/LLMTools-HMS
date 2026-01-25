@@ -1,0 +1,8 @@
+#!/bin/bash
+curl -X POST http://localhost:7486/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "llama",
+    "messages": [{"role": "user", "content": "Hello, how are you?"}],
+    "max_tokens": 100
+  }'

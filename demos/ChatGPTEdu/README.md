@@ -1,49 +1,49 @@
 ## 🎥 Demo Video Explanation
 
+This demo video showcases how the [**Open AI ChatGPT Edu**](https://chatgpt.com/) can be used for Deep Research and custom GPT (chatbot).
+The demo is composed of two exercises:
 
+- Deep Research with LLMs
 
-The demo video showcases how the [**Open AI ChatGPT Edu**](https://chatgpt.com/) can be used for Deep Research and custom GPT (chatbot).
+- Building a Custom Lab Chatbot
+
+Each exercise highlights a different capability, from literature review and reasoning to retrieval-augmented question answering for laboratory protocols.
 
 *Requirements*
 - ChatGPT Edu access. To request access, go to [ChatGPT Edu Account Request](https://harvard.service-now.com/ithelp?id=sc_cat_item&sys_id=b8db9dd34743961096ddb79c416d43c0)
 
 
 ---
-### Exercise 1: Information Retrieval From PDF File
+### Exercise 1: Deep Research
 
-In the first part of the demo, the system is shown retrieving structured information from a PDF document.  
+The exercise demonstrates how ChatGPT Edu can support deep scientific research by performing a structured literature review on *p53 to design cancer treatment*. 
 
-The demo uploads the scientific journal article (PDF file): [*Massy M, Marti S, Hammer H, Hoepner R. Increased vision impairment reports linked to semaglutide: analysis of FDA adverse event data. BMC Med. 2025 Apr 7;23(1):203. doi: 10.1186/s12916-025-04031-z. PMID: 40189538; PMCID: PMC11974072.*](https://pubmed.ncbi.nlm.nih.gov/40189538/)
+In this exercise, an LLM is used to conduct a literature review on the tumor suppressor p53, with the goal of informing cancer therapy design. To ensure the output is tailored to specific research needs, the model first asks clarifying follow-up questions, such as:
 
-It then demonstrates how the model:
+- Which cancer types to focus on
 
-- Digest the relevant document
+- Relevant therapeutic strategies (e.g., small molecules, gene therapy, immunotherapy)
 
-- Reads and analyzes the PDF content
+- Desired time range of the literature
 
-- Answers specific questions of interest:
+- Expected length and depth of the review
 
-  - *What is the study methodology*
-
-  - *What are the study conclusions*
-
-This demonstrates the AI Sandbox’s ability to perform document understanding and targeted information extraction from academic PDFs.
+This demonstrates how LLMs can move beyond generic summaries and instead produce customized, research-grade outputs.
 
 ---
 
-###  Exercise 2: Web Search
+###  Exercise 2: Custom Chatbot for a Research Lab
 
-In the second part of the demo, the system performs a live web search task.  
+The objective of this exercise is to build a custom chatbot designed to answer protocol-related questions for a laboratory studying human neurons. Researchers can query the chatbot with questions such as:
 
-An LLM that enables web search is selected. Given a prompt to find \*\*three recent cancer-research news stories\*\*, the model:
+- Step-by-step protocol clarifications
 
-- Searches the web for up-to-date and relevant sources
+- Reagent or timing checks
 
-- Identifies recent and credible cancer-research news
+The chatbot uses lab-specific protocols from [JoVE](https://app.jove.com/), enabling accurate and context-aware responses. The following protocols are added to the knowledge base:
+ - [Skin Punch Biopsy Explant Culture for Derivation of Primary Human Fibroblasts](https://app.jove.com/v/3779/skin-punch-biopsy-explant-culture-for-derivation-primary-human)
+ - [Isolation of Adult Human Dermal Fibroblasts from Abdominal Skin and Generation of Induced Pluripotent Stem Cells Using a Non-Integrating Method](https://app.jove.com/v/60629/isolation-adult-human-dermal-fibroblasts-from-abdominal-skin)
 
-- Summarizes key findings from each news story
-
-This exercise highlights the AI Sandbox’s ability to integrate **real-time web search** with language-model reasoning to retrieve current scientific information.
-
+This exercise demonstrates (1) How to create the chatbot using instructions, (2) How documents are added to the knowledge base, and (3) Example queries and responses showing real-world lab usage.
 
 

@@ -5,7 +5,7 @@ This demo video showcases how the [**Harvard University(HU) AI Sandbox**](https:
 - AI Sandbow access. To request access, go to [Harvard AI Sandbox](https://it.hms.harvard.edu/service/harvard-ai-sandbox)
 
 
-[](https://www.youtube.com/watch?v=9mwfykFKl1c)
+![cover](repo-image-sandbox.png)
 [Play Demo](https://www.youtube.com/watch?v=9mwfykFKl1c)
 
 ---
@@ -35,7 +35,7 @@ This demonstrates the AI Sandbox’s ability to perform document understanding a
 
 In the second part of the demo, the system performs a live web search task.  
 
-An LLM that enables web search is selected. Given a prompt to find \*\*three recent cancer-research news stories\*\*, the model:
+An LLM that enables web search is selected. Given a prompt to find *three recent cancer-research news stories*, the model:
 
 - Searches the web for up-to-date and relevant sources
 

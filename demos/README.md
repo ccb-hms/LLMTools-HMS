@@ -35,7 +35,7 @@ This demonstrates the AI Sandbox’s ability to perform document understanding a
 
 In the second part of the demo, the system performs a live web search task.  
 
-A LLM that enables web search is selected. Given a prompt to find \*\*three recent cancer-research news stories\*\*, the model:
+An LLM that enables web search is selected. Given a prompt to find \*\*three recent cancer-research news stories\*\*, the model:
 
 - Searches the web for up-to-date and relevant sources
 

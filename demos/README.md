@@ -1,76 +1,49 @@
-\## 🎥 Demo Video Explanation
+## 🎥 Demo Video Explanation
 
 
 
-The demo video showcases how the \*\*Harvard University Sandbox\*\* can be used to solve two different information-retrieval tasks using large language models and external tools.
+The demo video showcases how the [**Harvard University(HU) AI Sandbox**](https://sandbox.ai.huit.harvard.edu/c/new) can be used to extract information from documents (e.g., PDFs) and perform web search. 
+
+*Requirements*
+- AI Sandbow access. To request access, go to [Harvard AI Sandbox](https://it.hms.harvard.edu/service/harvard-ai-sandbox)
 
 
-
-\### Demo – Exercise 1: Document Retrieval (PDF)
-
-
+---
+### Exercise 1: Information Retrieval From PDF File
 
 In the first part of the demo, the system is shown retrieving structured information from a PDF document.  
 
-The demo uploads the scientific journal article (PDF file): **"Massy M, Marti S, Hammer H, Hoepner R. Increased vision impairment reports linked to semaglutide: analysis of FDA adverse event data. BMC Med. 2025 Apr 7;23(1):203. doi: 10.1186/s12916-025-04031-z. PMID: 40189538; PMCID: PMC11974072."** 
+The demo uploads the scientific journal article (PDF file): *Massy M, Marti S, Hammer H, Hoepner R. Increased vision impairment reports linked to semaglutide: analysis of FDA adverse event data. BMC Med. 2025 Apr 7;23(1):203. doi: 10.1186/s12916-025-04031-z. PMID: 40189538; PMCID: PMC11974072.*
+
 It then demonstrates how the model:
 
+- Digest the relevant document
 
-\- Digest the relevant document
+- Reads and analyzes the PDF content
 
-\- Reads and analyzes the PDF content
+- Answers specific questions of interest:
 
-\- Answers specific questions of interest, namely:
+  - *What is the study methodology*
 
-&nbsp; - The \*\*study methodology\*\*
+  - *What are the study conclusions*
 
-&nbsp; - The \*\*study conclusions\*\*
-
-
-
-This demonstrates the Sandbox’s ability to perform \*\*document understanding and targeted information extraction\*\* from academic PDFs.
-
-
+This demonstrates the AI Sandbox’s ability to perform document understanding and targeted information extraction from academic PDFs.
 
 ---
 
+###  Exercise 2: Web Search
+
+In the second part of the demo, the system performs a live web search task.  
+
+A LLM that enables web search is selected. Given a prompt to find \*\*three recent cancer-research news stories\*\*, the model:
+
+- Searches the web for up-to-date and relevant sources
+
+- Identifies recent and credible cancer-research news
+
+- Summarizes key findings from each news story
+
+This exercise highlights the AI Sandbox’s ability to integrate **real-time web search** with language-model reasoning to retrieve current scientific information.
 
 
-\### Demo – Exercise 2: Web Search
-
-
-
-In the second part of the demo, the system performs a \*\*live web search\*\* task.  
-
-Given a prompt to find \*\*three recent cancer-research news stories\*\*, the model:
-
-
-
-\- Searches the web for up-to-date and relevant sources
-
-\- Identifies recent and credible cancer-research news
-
-\- Summarizes key findings from each news story
-
-
-
-This exercise highlights the Sandbox’s ability to integrate \*\*real-time web search\*\* with language-model reasoning to retrieve and summarize current scientific information.
-
-
-
----
-
-
-
-\### Summary
-
-
-
-Overall, the demo video illustrates how the Harvard University Sandbox can:
-
-\- Retrieve and analyze information from static documents (PDFs)
-
-\- Search the web for recent information
-
-\- Produce concise, structured summaries suitable for research and academic workflows
 

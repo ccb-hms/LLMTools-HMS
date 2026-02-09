@@ -1,3 +1,7 @@
+![image](repo-image-chatgptEDU.png)
+[Play Demo](https://youtu.be/7923bmx58y4)
+
+---
 ## 🎥 Demo Video Explanation
 
 This demo video showcases how the [**Open AI ChatGPT Edu**](https://chatgpt.com/) can be used for Deep Research and custom GPT (chatbot).

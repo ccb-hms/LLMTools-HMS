@@ -1,12 +1,15 @@
+
+
+![cover](repo-image-sandbox.png)
+[Play Demo](https://www.youtube.com/watch?v=9mwfykFKl1c)
+
+----
 ## 🎥 Demo Video Explanation
 This demo video showcases how the [**Harvard University(HU) AI Sandbox**](https://sandbox.ai.huit.harvard.edu/c/new) can be used to extract information from documents (e.g., PDFs) and perform web search. 
 
 *Requirements*
 - AI Sandbow access. To request access, go to [Harvard AI Sandbox](https://it.hms.harvard.edu/service/harvard-ai-sandbox)
 
-
-![cover](repo-image-sandbox.png)
-[Play Demo](https://www.youtube.com/watch?v=9mwfykFKl1c)
 
 ---
 ### Exercise 1: Information Retrieval From PDF File

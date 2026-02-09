@@ -12,13 +12,12 @@ Each exercise highlights a different capability, from literature review and reas
 *Requirements*
 - ChatGPT Edu access. To request access, go to [ChatGPT Edu Account Request](https://harvard.service-now.com/ithelp?id=sc_cat_item&sys_id=b8db9dd34743961096ddb79c416d43c0)
 
-
 ---
 ### Exercise 1: Deep Research
 
 The exercise demonstrates how ChatGPT Edu can support deep scientific research by performing a structured literature review on *p53 to design cancer treatment*. 
 
-In this exercise, an LLM is used to conduct a literature review on the tumor suppressor p53, with the goal of informing cancer therapy design. To ensure the output is tailored to specific research needs, the model first asks clarifying follow-up questions, such as:
+In this exercise, ChatGPT is used to conduct a literature review on the tumor suppressor p53, with the goal of informing cancer therapy design. To ensure the output is tailored to specific research needs, the GPT model first asks clarifying follow-up questions, such as:
 
 - Which cancer types to focus on
 

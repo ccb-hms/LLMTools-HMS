@@ -1,5 +1,5 @@
-![image](repo-image-chatgptEDU.png)
-[Play Demo](https://youtu.be/7923bmx58y4)
+![image](../../images/repo-image-chatgpt.png)
+[Play Demo](https://www.youtube.com/watch?v=7923bmx58y4)
 
 ---
 ## 🎥 Demo Video Explanation

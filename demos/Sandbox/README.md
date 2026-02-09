@@ -1,6 +1,6 @@
 
 
-![cover](repo-image-sandbox.png)
+![cover](../../images/repo-image-sandbox.png)
 [Play Demo](https://www.youtube.com/watch?v=9mwfykFKl1c)
 
 ----

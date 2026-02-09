@@ -13,7 +13,7 @@ The demo video showcases how the [**Harvard University(HU) AI Sandbox**](https:/
 
 In the first part of the demo, the system is shown retrieving structured information from a PDF document.  
 
-The demo uploads the scientific journal article (PDF file): *Massy M, Marti S, Hammer H, Hoepner R. Increased vision impairment reports linked to semaglutide: analysis of FDA adverse event data. BMC Med. 2025 Apr 7;23(1):203. doi: 10.1186/s12916-025-04031-z. PMID: 40189538; PMCID: PMC11974072.*
+The demo uploads the scientific journal article (PDF file): [*Massy M, Marti S, Hammer H, Hoepner R. Increased vision impairment reports linked to semaglutide: analysis of FDA adverse event data. BMC Med. 2025 Apr 7;23(1):203. doi: 10.1186/s12916-025-04031-z. PMID: 40189538; PMCID: PMC11974072.*](https://pubmed.ncbi.nlm.nih.gov/40189538/)
 
 It then demonstrates how the model:
 

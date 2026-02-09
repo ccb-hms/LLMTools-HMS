@@ -1,49 +1,21 @@
 ## 🎥 Demo Video Explanation
-This demo video showcases how the [**Harvard University(HU) AI Sandbox**](https://sandbox.ai.huit.harvard.edu/c/new) can be used to extract information from documents (e.g., PDFs) and perform web search. 
+This demo video showcases how [Ollama](https://github.com/ollama/ollama), used through (Open WebUI)[https://github.com/open-webui/open-webui], can extract and synthesize information from a website article using multiple large language model.
 
 *Requirements*
-- AI Sandbow access. To request access, go to [Harvard AI Sandbox](https://it.hms.harvard.edu/service/harvard-ai-sandbox)
-
-
-![cover](repo-image-sandbox.png)
-[Play Demo](https://www.youtube.com/watch?v=9mwfykFKl1c)
+- [Ollama installation](https://github.com/ollama/ollama?tab=readme-ov-file). 
+- [WebUI installation](https://github.com/open-webui/open-webui)
 
 ---
-### Exercise 1: Information Retrieval From PDF File
+### Exercise 1: Information Retrieval From a Website Article
 
-In the first part of the demo, the system is shown retrieving structured information from a PDF document.  
+In this exercise, the [URL](https://www.npr.org/2025/10/20/nx-s1-5560956/collagen-supplements-skin-joints?utm_source=OCERMarketingCloud&utm_medium=email&utm_campaign=HMS+in+the+News+(October+20%2c+2025)&utm_content=https%3a%2f%2fwww.npr.org%2f2025%2f10%2f20%2fnx-s1-5560956%2fcollagen-supplements-skin-joints) of the article *"Can collagen supplements improve your skin? Here's what the research shows"* is added directly to the the WebUI. 
 
-The demo uploads the scientific journal article (PDF file): [*Massy M, Marti S, Hammer H, Hoepner R. Increased vision impairment reports linked to semaglutide: analysis of FDA adverse event data. BMC Med. 2025 Apr 7;23(1):203. doi: 10.1186/s12916-025-04031-z. PMID: 40189538; PMCID: PMC11974072.*](https://pubmed.ncbi.nlm.nih.gov/40189538/)
+Two different LLMs (gemma3.2 and llama3.2) are prompted to:
+- Read the article
+- Extract three key takeaways from the article.
 
-It then demonstrates how the model:
+The resulting responses are then merged into a single, consolidated summary.
 
-- Digest the relevant document
-
-- Reads and analyzes the PDF content
-
-- Answers specific questions of interest:
-
-  - *What is the study methodology*
-
-  - *What are the study conclusions*
-
-This demonstrates the AI Sandbox’s ability to perform document understanding and targeted information extraction from academic PDFs.
-
----
-
-###  Exercise 2: Web Search
-
-In the second part of the demo, the system performs a live web search task.  
-
-An LLM that enables web search is selected. Given a prompt to find *three recent cancer-research news stories*, the model:
-
-- Searches the web for up-to-date and relevant sources
-
-- Identifies recent and credible cancer-research news
-
-- Summarizes key findings from each news story
-
-This exercise highlights the AI Sandbox’s ability to integrate **real-time web search** with language-model reasoning to retrieve current scientific information.
-
+This exercise highlights how Ollama and WebUI can be used to compare model outputs, identify complementary insights, and synthesize higher-quality responses from web-based sources.
 
 

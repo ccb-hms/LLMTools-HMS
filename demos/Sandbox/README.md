@@ -7,7 +7,7 @@ The demo video showcases how the [**Harvard University(HU) AI Sandbox**](https:/
 *Requirements*
 - AI Sandbow access. To request access, go to [Harvard AI Sandbox](https://it.hms.harvard.edu/service/harvard-ai-sandbox)
 
-
+[![Demo Video](https://img.youtube.com/vi/9mwfykFKl1c/0.jpg)](https://www.youtube.com/watch?v=9mwfykFKl1c)
 ---
 ### Exercise 1: Information Retrieval From PDF File
 

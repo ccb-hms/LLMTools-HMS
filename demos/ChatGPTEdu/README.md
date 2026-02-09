@@ -2,10 +2,10 @@
 
 
 
-The demo video showcases how the [**Harvard University(HU) AI Sandbox**](https://sandbox.ai.huit.harvard.edu/c/new) can be used to extract information from documents (e.g., PDFs) and perform web search. 
+The demo video showcases how the [**Open AI ChatGPT Edu**](https://chatgpt.com/) can be used for Deep Research and custom GPT (chatbot).
 
 *Requirements*
-- AI Sandbow access. To request access, go to [Harvard AI Sandbox](https://it.hms.harvard.edu/service/harvard-ai-sandbox)
+- ChatGPT Edu access. To request access, go to [ChatGPT Edu Account Request](https://harvard.service-now.com/ithelp?id=sc_cat_item&sys_id=b8db9dd34743961096ddb79c416d43c0)
 
 
 ---

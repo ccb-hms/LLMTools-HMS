@@ -10,17 +10,17 @@ The demo video showcases how the \*\*Harvard University Sandbox\*\* can be used 
 
 
 
-In the first part of the demo, the system is shown retrieving structured information from a \*\*PDF document\*\*.  
+In the first part of the demo, the system is shown retrieving structured information from a PDF document.  
 
-The demo takes as input the name of a scientific journal article — \_“Increased vision impairment reports linked to semaglutide: analysis of FDA adverse event data”\_ — and demonstrates how the model:
+The demo uploads the scientific journal article (PDF file): **"Massy M, Marti S, Hammer H, Hoepner R. Increased vision impairment reports linked to semaglutide: analysis of FDA adverse event data. BMC Med. 2025 Apr 7;23(1):203. doi: 10.1186/s12916-025-04031-z. PMID: 40189538; PMCID: PMC11974072."** 
+It then demonstrates how the model:
 
 
-
-\- Locates the relevant document
+\- Digest the relevant document
 
 \- Reads and analyzes the PDF content
 
-\- Extracts specific sections of interest, namely:
+\- Answers specific questions of interest, namely:
 
 &nbsp; - The \*\*study methodology\*\*
 

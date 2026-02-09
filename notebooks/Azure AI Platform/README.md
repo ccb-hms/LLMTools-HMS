@@ -1,4 +1,4 @@
-![image](../../images/repo-image-chatgpt.png)
+![image](../../images/repo-image-azureAI.png)
 [Play Demo](https://www.youtube.com/watch?v=C1Wbf5YQm_Y)
 
 ---
@@ -19,7 +19,7 @@ The demo illustrates how to:
 
 The notebook used in this exercise is located at:
 
-```LLMTools-HMS/notebooks/AzureAIPlatform/Azure-Example.ipynb```
+```LLMTools-HMS/notebooks/AzureAIPlatform/Azure-Exercise-Demo.ipynb```
 
 *Requirements*
 - Azure Open AI API acess. To request API access, contact **Po Yu** from HMS IT at francis_yu@hms.harvard.edu

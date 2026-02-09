@@ -1,3 +1,6 @@
+
+![cover](../../images/repo-image-ollama.png)
+[Play Demo](https://www.youtube.com/watch?v=ZE4gmxueRec&feature=youtu.be)
 ## 🎥 Demo Video Explanation
 This demo video showcases how [Ollama](https://github.com/ollama/ollama), used through [Open WebUI](https://github.com/open-webui/open-webui), can extract and synthesize information from a website article using multiple large language model.
 

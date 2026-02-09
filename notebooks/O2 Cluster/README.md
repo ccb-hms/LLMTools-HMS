@@ -4,26 +4,30 @@
 ---
 ## 🎥 Demo Video Explanation
 
-This demo video showcases how the [**Azure AI Platform**](https://it.hms.harvard.edu/service/azure-ai) can be used for batch inference.
-A subset of the [MedMCQA](https://huggingface.co/datasets/openlifescienceai/medmcqa) dataset is used for demonstration purposes. 
+This demo video showcases how the [**O2 Cluster**](https://harvardmed.atlassian.net/wiki/spaces/O2/overview) can be used for batch inference with large language models.
+For demonstration purposes, it uses a subset of the [MedMCQA](https://huggingface.co/datasets/openlifescienceai/medmcqa) dataset.
 
-The demo illustrates how to:
+The demo leverages Ollama in conjunction with the O2 Portal.
 
-- Build an Azure OpenAI client
+The video walks through how to:
 
-- Generate a prompt
+- Launch a Jupyter notebook on the [O2 Portal](https://o2portal.rc.hms.harvard.edu/pun/sys/dashboard) using Ollama
 
-- Submit requests and extract model responses
+- Load the gemma3:12b model via Ollama
 
-- Loop through a dataset to obtain responses from multiple models (GPT-4o and GPT-4.1)
+- Construct prompts and messages
 
-The notebook used in this exercise is located at:
+- Tokenize input prompts
 
-```LLMTools-HMS/notebooks/AzureAIPlatform/Azure-Example.ipynb```
+- Generate model inferences
+
+- Process a dataset in batches to obtain LLM responses
+
+- Parse and detokenize the model outputs
+
+The notebook used in this demo is located at:
+
+```LLMTools-HMS/notebooks/O2/O2-demo.ipynb```
 
 *Requirements*
-- Azure Open AI API acess. To request API access, contact **Po Yu** from HMS IT at francis_yu@hms.harvard.edu
-- [Python](https://www.python.org/downloads/) 
-- Python packages: [openai](https://github.com/openai/openai-python), [datasets](https://github.com/huggingface/datasets)
-
-This exercise demonstrates how to perform scalable batch inference with Azure OpenAI models using a real-world biomedical QA dataset.
+- Acces to the O2 Cluster. To request access, submit the [O2 Cluster Account Request Form](https://harvardmed.service-now.com/stat?id=sc_cat_item&sys_id=5165e1dbdb209050b642f27139961979&sysparm_category=991a7f2edb890c10b642f2713996196a) 

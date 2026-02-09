@@ -19,7 +19,7 @@ The demo illustrates how to:
 
 The notebook used in this exercise is located at:
 
-```LLMTools-HMS/notebooks/AzureAIPlatform/Azure-Exercise-Demo.ipynb```
+```LLMTools-HMS/notebooks/Azure AI Platform/Azure-Exercise-Demo.ipynb```
 
 *Requirements*
 - Azure Open AI API acess. To request API access, contact **Po Yu** from HMS IT at francis_yu@hms.harvard.edu

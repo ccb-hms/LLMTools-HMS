@@ -2,7 +2,7 @@
 This demo video showcases how [Ollama](https://github.com/ollama/ollama), used through [Open WebUI](https://github.com/open-webui/open-webui), can extract and synthesize information from a website article using multiple large language model.
 
 *Requirements*
-- [Ollama installation](https://github.com/ollama/ollama?tab=readme-ov-file). 
+- [Ollama installation](https://github.com/ollama/ollama?tab=readme-ov-file)
 - [WebUI installation](https://github.com/open-webui/open-webui)
 
 ---

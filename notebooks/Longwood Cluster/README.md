@@ -1,5 +1,5 @@
 ![image](../../images/repo-image-o2-v2.png)
-[Play Demo](https://www.youtube.com/watch?v=2JLwxzw0R8s&feature=youtu.be)
+[Play Demo](https://www.youtube.com/watch?v=iQmn4BdOWsw)
 
 ---
 ## 🎥 Demo Video Explanation
@@ -25,7 +25,7 @@ The video walks through how to:
 
 The notebook used in this demo is located at:
 
-```LLMTools-HMS/notebooks/Lonwood Cluster/lonwood-demo.ipynb```
+```LLMTools-HMS/notebooks/Lonwood Cluster/lonwood-demo.py```
 
 *Requirements*
 - Acces to the Longwood Cluster. To request access, contact HMS IT Research Computing at rchelp@hms.harvard.edu
@@ -34,41 +34,43 @@ The notebook used in this demo is located at:
 ## Longwood Cluster Setup (Command Line) To run Python Script
 To run longwood-demo.py script, follow these steps to set up an environment on the Longwood Cluster.
 
+Step 1. Connect to the Longwood login node from command line
 
-1. Connect to the Longwood login node from command line
 ```ssh username@login.dgx.rc.hms.harvard.edu```
 
-2. Start a GPU interactive session
+Step 2. Start a GPU interactive session
+
 ```srun --pty --account=ccb_contrib -t 0-08:00 --mem=256G -c 1 --gres=gpu:4 -p gpu_ccb /bin/bash```
 
-3. create a Python virtual environment
+Step 3. Create a Python virtual environment
+
 ```python -m venv demo-env```
 
-4. Activate the virtual environment
+Step 4. Activate the virtual environment
+   
 ```source demo-env/bin/activate```
 
-5. Install requirements
+Step 5. Get project files and install dependencies
 
-Option 1: clone this repo
+- Option A: Clone the repository
+
 ```module load git
-git clone
+git clone <REPO_URL>
 cd LLMTools-HMS/notebooks/Longwood\ Cluster/
 pip install -r requirements.txt
 ```
 
-Option 2: create a project directory and copy the files
+- Option B: Create a project directory and copy files manually
 
-1. Download files: 
-```mkdir longwoodDemo
-cd longwoodDemo```
+Create a project directory on the Longwood Cluster:
 
-Open a new terminal
-``` scp requirements.txt username@login.dgx.rc.hms.harvard.edu:/home/username/longwoodDemo
-scp requirements.txt username@login.dgx.rc.hms.harvard.edu:/home/username/longwoodDemo
+```mkdir longwoodDemo ```
 
-6. Copy requirements file to the cluster
+From a new terminal on your local machine, copy the required files into the Longwood Cluster:
+```scp requirements.txt username@login.dgx.rc.hms.harvard.edu:/home/username/longwoodDemo
+scp longwood-demo.py username@login.dgx.rc.hms.harvard.edu:/home/username/longwoodDemo
+```
 
-
-##OR
-##Download the files and use either rsync or scp:
-rsync -avz requirements.txt username@login.dgx.rc.hms.harvard.edu:/home/username/longwoodDemo
+Install dependencies from the Longwood login node:
+```cd longwoodDemo
+pip install -r requirements.txt```

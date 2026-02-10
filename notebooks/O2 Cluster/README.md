@@ -17,13 +17,11 @@ The video walks through how to:
 
 - Construct prompts and messages
 
-- Tokenize input prompts
-
 - Generate model inferences
 
 - Process a dataset in batches to obtain LLM responses
 
-- Parse and detokenize the model outputs
+- Parse model outputs
 
 The notebook used in this demo is located at:
 

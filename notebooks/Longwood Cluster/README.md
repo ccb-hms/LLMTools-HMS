@@ -4,16 +4,14 @@
 ---
 ## 🎥 Demo Video Explanation
 
-This demo video showcases how the [**O2 Cluster**](https://harvardmed.atlassian.net/wiki/spaces/O2/overview) can be used for batch inference with large language models.
+This demo video showcases how the [**Longwood Cluster**](https://it.hms.harvard.edu/service/longwood-hpc-cluster) can be used for batch inference with large language models.
 For demonstration purposes, it uses a subset of the [MedMCQA](https://huggingface.co/datasets/openlifescienceai/medmcqa) dataset.
 
-This demo runs Ollama on the HMS O2 Cluster and uses the Jupyter application available through the O2 Portal.
+This demo runs a Python script for batch inference from the command line on the Longwood Cluster.
 
 The video walks through how to:
 
-- Launch a Jupyter notebook on the [O2 Portal](https://o2portal.rc.hms.harvard.edu/pun/sys/dashboard) using Ollama
-
-- Load the gemma3:12b model via Ollama
+- Load the [Qwen/Qwen3-235B-A22B-Instruct-2507](https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507) model from Hugging Face Hub
 
 - Construct prompts and messages
 
@@ -27,31 +25,38 @@ The video walks through how to:
 
 The notebook used in this demo is located at:
 
-```LLMTools-HMS/notebooks/O2/O2-demo.ipynb```
+```LLMTools-HMS/notebooks/Lonwood Cluster/lonwood-demo.ipynb```
 
 *Requirements*
-- Acces to the O2 Cluster. To request access, submit the [O2 Cluster Account Request Form](https://harvardmed.service-now.com/stat?id=sc_cat_item&sys_id=5165e1dbdb209050b642f27139961979&sysparm_category=991a7f2edb890c10b642f2713996196a)
-
+- Acces to the Longwood Cluster. To request access, contact HMS IT Research Computing at rchelp@hms.harvard.edu
+  
 --- 
-## O2 Cluster Setup (Command Line) To run Jupyter Lab on O2 Portal
-To use Jupyter Lab on O2 Portal, follow these steps to set up a Python virtual environment on the HMS O2 Cluster. 
+## Longwood Cluster Setup (Command Line) To run Python Script
+To run longwood-demo.py script, follow these steps to set up an environment on the Longwood Cluster.
 
 ````
-1. Connect to the O2 login node
-ssh username@o2.hms.harvard.edu
+1. Connect to the Longwood login node
+ssh username@login.dgx.rc.hms.harvard.edu
 
-2. Start an interactive session
-srun --pty -p interactive -t 0-2 bash
+2. Start a GPU interactive session
+srun --pty --account=ccb_contrib -t 0-08:00 --mem=256G -c 1 --gres=gpu:4 -p gpu_ccb /bin/bash
 
-3. Load required modules
-module load gcc/14.2.0 python/3.13.1
+3. create a Python virtual environment
+python -m venv demo-env
 
-4. Create a Python virtual environment
-python -m venv ollama-env
+4. Activate the virtual environment
+source demo-env/bin/activate
 
-5. Activate the virtual environment
-source ollama-env/bin/activate
+5. Create and enter the project directory
+mkdir longwoodDemo
+cd longwoodDemo
 
-6. Install Jupyter and JupyterLab
-pip install jupyter jupyterlab
+6. Copy requirements file to the cluster
+##clone this repo
+module load git
+git clone
 
+##OR
+##Download the files and use either rsync or scp:
+rsync -avz requirements.txt username@login.dgx.rc.hms.harvard.edu:/home/username/longwoodDemo
+scp requirements.txt username3@login.dgx.rc.hms.harvard.edu:/home/username/longwoodDemo

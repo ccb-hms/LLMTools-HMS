@@ -73,4 +73,4 @@ scp longwood-demo.py username@login.dgx.rc.hms.harvard.edu:/home/username/longwo
 
 Install dependencies from the Longwood login node:
 ```cd longwoodDemo
-pip install -r requirements.txt```
+pip install -r requirements.txt

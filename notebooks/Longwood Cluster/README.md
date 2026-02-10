@@ -1,4 +1,4 @@
-![image](../../images/repo-image-o2-v2.png)
+![image](../../images/repo-image-longwood.png)
 [Play Demo](https://www.youtube.com/watch?v=iQmn4BdOWsw)
 
 ---

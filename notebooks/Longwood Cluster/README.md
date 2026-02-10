@@ -34,29 +34,41 @@ The notebook used in this demo is located at:
 ## Longwood Cluster Setup (Command Line) To run Python Script
 To run longwood-demo.py script, follow these steps to set up an environment on the Longwood Cluster.
 
-````
-1. Connect to the Longwood login node
-ssh username@login.dgx.rc.hms.harvard.edu
+
+1. Connect to the Longwood login node from command line
+```ssh username@login.dgx.rc.hms.harvard.edu```
 
 2. Start a GPU interactive session
-srun --pty --account=ccb_contrib -t 0-08:00 --mem=256G -c 1 --gres=gpu:4 -p gpu_ccb /bin/bash
+```srun --pty --account=ccb_contrib -t 0-08:00 --mem=256G -c 1 --gres=gpu:4 -p gpu_ccb /bin/bash```
 
 3. create a Python virtual environment
-python -m venv demo-env
+```python -m venv demo-env```
 
 4. Activate the virtual environment
-source demo-env/bin/activate
+```source demo-env/bin/activate```
 
-5. Create and enter the project directory
-mkdir longwoodDemo
-cd longwoodDemo
+5. Install requirements
+
+Option 1: clone this repo
+```module load git
+git clone
+cd LLMTools-HMS/notebooks/Longwood\ Cluster/
+pip install -r requirements.txt
+```
+
+Option 2: create a project directory and copy the files
+
+1. Download files: 
+```mkdir longwoodDemo
+cd longwoodDemo```
+
+Open a new terminal
+``` scp requirements.txt username@login.dgx.rc.hms.harvard.edu:/home/username/longwoodDemo
+scp requirements.txt username@login.dgx.rc.hms.harvard.edu:/home/username/longwoodDemo
 
 6. Copy requirements file to the cluster
-##clone this repo
-module load git
-git clone
+
 
 ##OR
 ##Download the files and use either rsync or scp:
 rsync -avz requirements.txt username@login.dgx.rc.hms.harvard.edu:/home/username/longwoodDemo
-scp requirements.txt username3@login.dgx.rc.hms.harvard.edu:/home/username/longwoodDemo

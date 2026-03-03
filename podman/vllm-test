@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# ENVIRONMENT
+POD="llmpod"
+RHAIIS_CACHE_DIR="${HOME}/data/rhaiis.cache"
+
+# --userns=keep-id:uid=1001 # Defined on pod-level
+# --userns=keep-id:uid=39743
+# --pod=${POD}
+
+# CONTAINER
+podman run --rm -it \
+--device nvidia.com/gpu=all \
+--security-opt=label=disable \
+--shm-size=4GB \
+--name rhai-llama \
+--env-file vllm.env \
+--publish 7485:8000 \
+-v ${RHAIIS_CACHE_DIR}:/opt/app-root/src/.cache:Z \
+registry.redhat.io/rhaiis/vllm-cuda-rhel9 \
+--model RedHatAI/Llama-3.2-1B-Instruct-FP8 \
+--served-model-name llama \
+--host 0.0.0.0 \
+--port 8000 \
+--max-model-len 1024 \
+--max-num-seqs 8 \
+--tensor-parallel-size 1 \
+--enforce-eager \
+--disable-custom-all-reduce

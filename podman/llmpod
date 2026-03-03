@@ -3,8 +3,10 @@
 # ENVIRONMENT
 POD="llmpod"
 
+# Flags not used
+# --userns=keep-id:uid=1001
+
 # Create the pod
 podman pod create \
 --name ${POD} \
--p 127.0.0.1:7486:8888 \
---userns=keep-id:uid=1001
+-p 7485:7485

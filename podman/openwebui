@@ -6,9 +6,6 @@ POD="llmpod"
 # CONTAINER
 podman run --rm \
 --pod=${POD} \
---security-opt=label=disable \
---env-file=app.env \
---workdir=/app \
--v ${PROJECT_DIR}:/app \
--v ${DATA_DIR}:/app/data \
-localhost/app:latest
+--env-file openwebui.env \
+-v open-webui-data:/app/backend/data:Z \
+open-webui/open-webui:main

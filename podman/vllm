@@ -2,22 +2,18 @@
 
 # ENVIRONMENT
 POD="llmpod"
-PROJECT_DIR="${HOME}/gitrepos/llmtools"
 RHAIIS_CACHE_DIR="${HOME}/data/rhaiis.cache"
-HUGGING_FACE_CACHE_DIR="${HOME}/data/hf.cache"
 
-# UNUSED FLAGS
 # --userns=keep-id:uid=1001 # Defined on pod-level
 # --pod=${POD}
 
 # CONTAINER
 podman run --rm -it \
---pod ${POD} \
 --device nvidia.com/gpu=all \
 --security-opt=label=disable \
 --shm-size=4GB \
 --name rhaiis-llama \
---env-file .vllm_env \
+--env-file vllm.env \
 -v ${RHAIIS_CACHE_DIR}:/opt/app-root/src/.cache:Z \
 registry.redhat.io/rhaiis/vllm-cuda-rhel9:latest \
 --model RedHatAI/Llama-3.2-1B-Instruct-quantized.w8a8 \
